@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /floor.html
+Disallow: /architecture.html
+Disallow: /industry.html
 
 Sitemap: https://taptrans13-commits.github.io/-/sitemap.xml

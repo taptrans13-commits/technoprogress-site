@@ -3,65 +3,82 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Контакты ТЕХНОПРОГРЕСС - заявка и обратный звонок</title>
-    <meta name="description" content="Телефон, почта, адрес и реквизиты ТЕХНОПРОГРЕСС для заявки на системы электрообогрева.">
+    <title>Контакты ООО ТЕХНОПРОГРЕСС - запрос на кабель и электротехнику</title>
+    <meta name="description" content="Телефон, почта, адрес и реквизиты ООО ТЕХНОПРОГРЕСС. Отправьте запрос на поставку кабельно-проводниковой и электротехнической продукции.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body class="inner-page">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС">
-        <img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС">
-      </a>
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav-links" aria-label="Основная навигация">
-        <a class="" href="index.html">Главная</a><a class="" href="catalog.html">Каталог</a><a class="" href="floor.html">Теплые полы</a><a class="" href="architecture.html">Кровля и трубы</a><a class="" href="industry.html">Промобогрев</a><a class="active" href="contacts.html">Контакты</a>
+        <a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a class="active" href="contacts.html">Контакты</a>
       </nav>
-      <a class="header-phone" href="tel:+73422071020" aria-label="Позвонить в ТЕХНОПРОГРЕСС">+7 342 207-10-20</a>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
     </header>
-    <main id="top">
+    <main>
       <section class="page-hero contact-hero">
         <div class="section-inner page-hero-inner">
           <p class="eyebrow">Контакты</p>
-          <h1>Связаться с ТЕХНОПРОГРЕСС</h1>
-          <p>Позвоните, отправьте заявку на почту или добавьте расчет через калькулятор на главной странице.</p>
+          <h1>Связаться с ООО «ТЕХНОПРОГРЕСС»</h1>
+          <p>Отправьте запрос, спецификацию или список позиций. Ответ подготовим на email или по телефону.</p>
           <div class="hero-actions">
-            <a class="button primary" href="tel:+73422071020">Позвонить +7 342 207-10-20</a>
-            <a class="button light" href="mailto:Head-tp@yandex.ru?subject=Заявка%20с%20сайта%20ТЕХНОПРОГРЕСС">Написать на почту</a>
-            <a class="button ghost" href="index.html#calculator">Калькулятор</a>
+            <a class="button primary" href="tel:+73422071020">Позвонить</a>
+            <a class="button light" href="mailto:Head-tp@yandex.ru">Написать на почту</a>
           </div>
         </div>
       </section>
-      <section class="section contact-page-section">
+      <section class="section">
         <div class="section-inner contact-page-grid">
-          <div class="contact-card">
-            <p class="section-kicker">Заявка</p>
-            <h2>Быстрые контакты</h2>
-            <div class="contact-stack dark">
+          <article class="contact-card reveal">
+            <p class="section-kicker">Связь</p>
+            <h2>Заявки и консультации</h2>
+            <div class="contact-stack">
               <a href="tel:+73422071020">+7 342 207-10-20</a>
               <a href="tel:+79922121369">+7 992 212-13-69</a>
               <a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a>
+              <a href="mailto:info@power-cab.ru">info@power-cab.ru</a>
             </div>
-          </div>
-          <div class="contact-card">
+          </article>
+          <article class="contact-card reveal">
             <p class="section-kicker">Реквизиты</p>
             <h2>ООО «ТЕХНОПРОГРЕСС»</h2>
             <address>
-              ИНН 5907048846, ОГРН 1205900029543<br>
+              ИНН 5907048846<br>
+              ОГРН 1205900029543<br>
               Пермь, ул. Ново-Гайвинская, 102, офис 31
             </address>
-            <a class="button secondary" href="index.html#request">Открыть форму заявки</a>
+          </article>
+          <article class="contact-card reveal">
+            <p class="section-kicker">Электрообогрев</p>
+            <h2>Связанные сайты</h2>
+            <div class="contact-stack">
+              <a href="https://taptrans13-commits.github.io/-/" target="_blank" rel="noopener">Системы электрообогрева</a>
+              <a href="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/index.html" target="_blank" rel="noopener">КДБС для прогрева бетона</a>
+              <a href="offer.html">Публичная оферта</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal">
+            <p class="section-kicker">Форма</p>
+            <h2>Отправить запрос</h2>
+            <p>Форма подготовит письмо с вашими данными. После подключения Telegram-бота этот же поток можно отправлять в бот.</p>
           </div>
+          <div data-request-slot></div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <div>
-        <img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС">
-        <p>Электрообогрев, кабель, комплектующие и промышленная комплектация.</p>
-      </div>
-      <div>
-        <a href="tel:+73422071020">+7 342 207-10-20</a>
-        <a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a>
-      </div>
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Поставка кабеля, провода и электротехники под объект.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="offer.html">Оферта</a><a href="privacy.html">Политика</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
     </footer>
   </body>
 </html>

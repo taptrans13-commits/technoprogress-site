@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Отраслевые решения - кабель и электротехника ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Кабель и электротехника для строительства, промышленности, энергетики, ЦОД, нефтегаза и систем пожарной безопасности.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="section-inner page-hero-inner">
+          <p class="eyebrow">Отрасли</p>
+          <h1>Поставка кабеля и электротехники под тип объекта</h1>
+          <p>Подбираем не отдельную позицию, а комплект, который соответствует среде эксплуатации, пожарным требованиям, срокам и проектным документам.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="solution-grid expanded" id="solutionCards"></div>
+        </div>
+      </section>
+      <section class="section muted-section">
+        <div class="section-inner two-column">
+          <div class="reveal">
+            <p class="section-kicker">Инженерная логика</p>
+            <h2>Что учитываем при подборе</h2>
+            <p>Для каждого объекта важны не только марка и цена. На итоговую поставку влияют способ прокладки, пожарное исполнение, среда, строительная длина, документы и возможность замены.</p>
+          </div>
+          <ul class="check-list reveal">
+            <li>Класс пожарной опасности и требования проекта</li>
+            <li>Механическая защита, броня, экран, оболочка</li>
+            <li>Напряжение, токовая нагрузка и длина линии</li>
+            <li>Наличие документов, паспортов и сертификатов</li>
+            <li>Логистика барабанов и срок выхода на объект</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal"><p class="section-kicker">Отраслевой подбор</p><h2>Отправьте задачу объекта</h2><p>Укажите тип объекта, сроки, город и приложите спецификацию.</p></div>
+          <div data-request-slot></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Комплектация строительных, промышленных и инфраструктурных объектов.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="supply.html">Поставка</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
+    </footer>
+  </body>
+</html>

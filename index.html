@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ТЕХНОПРОГРЕСС - электрообогрев, теплые полы, кровля и трубопроводы</title>
-    <meta
-      name="description"
-      content="ТЕХНОПРОГРЕСС поставляет системы электрообогрева для пола, кровли, трубопроводов и промышленных объектов. Калькулятор объема, цены с НДС, заявка на почту и быстрый звонок."
-    >
-    <link rel="preload" href="assets/roof-architecture.svg" as="image">
+    <title>ТЕХНОПРОГРЕСС - кабельно-проводниковая и электротехническая продукция</title>
+    <meta name="description" content="ООО ТЕХНОПРОГРЕСС поставляет кабель, провод, электротехническую продукцию и комплектующие под проектные спецификации. Заявка на КП, подбор аналогов, поставка на объект.">
+    <meta property="og:title" content="ТЕХНОПРОГРЕСС - кабель и электротехника">
+    <meta property="og:description" content="Кабельно-проводниковая и электротехническая продукция для строительства, промышленности, энергетики и инфраструктуры.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/hero-cable-warehouse.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
     <script src="app.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "ТЕХНОПРОГРЕСС",
-        "url": "https://taptrans13-commits.github.io/-/",
+        "name": "ООО ТЕХНОПРОГРЕСС",
         "telephone": "+7 342 207-10-20",
         "email": "Head-tp@yandex.ru",
         "address": {
@@ -25,7 +26,11 @@
           "addressLocality": "Пермь",
           "streetAddress": "ул. Ново-Гайвинская, 102, офис 31",
           "addressCountry": "RU"
-        }
+        },
+        "identifier": [
+          { "@type": "PropertyValue", "name": "ИНН", "value": "5907048846" },
+          { "@type": "PropertyValue", "name": "ОГРН", "value": "1205900029543" }
+        ]
       }
     </script>
   </head>
@@ -34,430 +39,187 @@
       <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС">
         <img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС">
       </a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav-links" aria-label="Основная навигация">
-        <a class="active" href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="floor.html">Теплые полы</a>
-        <a href="architecture.html">Кровля и трубы</a>
-        <a href="industry.html">Промобогрев</a>
-        <a href="contacts.html">Контакты</a>
-        <a href="#calculator">Калькулятор</a>
+        <a class="active" href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
       </nav>
-      <a class="header-phone" href="tel:+73422071020" aria-label="Позвонить в ТЕХНОПРОГРЕСС">+7 342 207-10-20</a>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
     </header>
 
-    <main id="top">
+    <main>
       <section class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-inner">
-          <p class="eyebrow">Поставки и подбор систем электрообогрева</p>
-          <h1>ТЕХНОПРОГРЕСС</h1>
+          <p class="eyebrow">Кабель, провод, электротехника</p>
+          <h1>Комплексная поставка кабельно-проводниковой продукции под проект</h1>
           <p class="hero-copy">
-            Теплые полы, обогрев кровли и водостоков, защита трубопроводов от замерзания,
-            промышленный обогрев и комплектующие с расчетом нужного объема.
+            ООО «ТЕХНОПРОГРЕСС» помогает снабжению, проектировщикам и подрядчикам быстро закрывать спецификации:
+            кабель, электротехника, аналоги, документы и поставка на объект.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#calculator">Рассчитать объем</a>
+            <a class="button primary" href="#request">Отправить запрос</a>
             <a class="button light" href="catalog.html">Открыть каталог</a>
-            <button class="button ghost" type="button" data-callback>Обратный звонок</button>
+            <a class="button ghost" href="#request">Загрузить спецификацию</a>
           </div>
-          <dl class="hero-facts" aria-label="Ключевые условия">
+          <dl class="hero-facts" aria-label="Ключевые преимущества">
             <div>
-              <dt>302</dt>
-              <dd>позиции в прайсе</dd>
+              <dt>КП</dt>
+              <dd>по ведомости, смете или списку марок</dd>
             </div>
             <div>
-              <dt>НДС</dt>
-              <dd>цены уже включают налог</dd>
+              <dt>Аналоги</dt>
+              <dd>подбор по ГОСТ, ТУ и условиям прокладки</dd>
             </div>
             <div>
-              <dt>1-2 дня</dt>
-              <dd>типовая отмотка и отгрузка</dd>
+              <dt>Документы</dt>
+              <dd>сертификаты, паспорта, закрывающие документы</dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <section class="section intro-band" aria-label="Коммерческие преимущества">
+      <section class="section intro-band">
         <div class="section-inner intro-grid">
           <div>
-            <p class="section-kicker">Для закупки и объекта</p>
-            <h2>Подбор, расчет, документы и поставка в одном контуре</h2>
+            <p class="section-kicker">Для быстрого подбора</p>
+            <h2>Найдите нужную позицию и отправьте запрос</h2>
           </div>
           <div class="intro-points">
-            <span>Подбираем позиции и аналоги</span>
-            <span>Считаем метраж, комплекты и бюджет</span>
-            <span>Готовим счет, УПД и ЭДО</span>
-            <span>Согласуем логистику под график объекта</span>
+            <span>Подбор по марке и назначению</span>
+            <span>Запрос из страницы товара</span>
+            <span>Загрузка XLS/PDF-спецификации</span>
+            <span>Ответ на email, позже - Telegram-бот</span>
           </div>
         </div>
       </section>
 
-      <section class="section proof-section">
+      <section class="section">
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="section-kicker">Почему ТЕХНОПРОГРЕСС</p>
-              <h2>Сайт не просто показывает цену, а ведет к готовой комплектации</h2>
+              <p class="section-kicker">Каталог</p>
+              <h2>Два направления в одной поставке</h2>
             </div>
-            <p>
-              Клиенту не нужно разбираться в каждом кабеле вручную: можно выбрать задачу,
-              посчитать ориентировочный объем, добавить позиции в заявку и передать исходные данные менеджеру.
-            </p>
+            <p>Подбирайте отдельные позиции или отправляйте спецификацию целиком - менеджер проверит наличие, сроки и аналоги.</p>
           </div>
-          <div class="proof-grid">
-            <article>
-              <strong>302</strong>
-              <h3>позиции в каталоге</h3>
-              <p>Полные наименования, артикулы, категории и прайсовые цены с НДС.</p>
-            </article>
-            <article>
-              <strong>3</strong>
-              <h3>основных направления</h3>
-              <p>Теплые полы, архитектурный обогрев и промышленный электрообогрев.</p>
-            </article>
-            <article>
-              <strong>4 шага</strong>
-              <h3>до заявки на расчет</h3>
-              <p>Достаточно площади, длины трассы, типа объекта и удобных контактов.</p>
-            </article>
-            <article>
-              <strong>НДС</strong>
-              <h3>понятная закупка</h3>
-              <p>В заявке можно запросить счет, УПД, ЭДО и комплект документов.</p>
-            </article>
+          <div class="direction-grid">
+            <a class="direction-card reveal" href="cable.html">
+              <img src="assets/cable-macro.png" alt="Силовые кабели с медными жилами" loading="lazy">
+              <div>
+                <span>01</span>
+                <h3>Кабельно-проводниковая продукция</h3>
+                <p>Силовой, контрольный, монтажный, гибкий, огнестойкий кабель, СИП, связь и оптика.</p>
+              </div>
+            </a>
+            <a class="direction-card reveal" href="electrical.html">
+              <img src="assets/electrical-switchgear.png" alt="Щитовое электротехническое оборудование" loading="lazy">
+              <div>
+                <span>02</span>
+                <h3>Электротехническая продукция</h3>
+                <p>Защита, коммутация, щитовое оборудование, кабеленесущие системы и электромонтажные изделия.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="solutions">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="section-kicker">Направления</p>
-            <h2>Системы обогрева под разные задачи</h2>
-            <p>
-              В каталоге собраны кабельные секции, маты, саморегулирующиеся кабели,
-              промышленные исполнения, терморегуляторы и монтажные комплектующие.
-            </p>
-          </div>
-          <div class="solutions-grid">
-            <article class="solution-card">
-              <img src="assets/cable-details.svg" alt="Нагревательный кабель и монтажные элементы">
-              <div>
-                <h3>Теплые полы</h3>
-                <p>Кабельные секции 15 и 20 Вт/м, нагревательные маты 150 и 200 Вт/м2, регуляторы и датчики.</p>
-                <a href="floor.html">Смотреть группу</a>
-              </div>
-            </article>
-            <article class="solution-card">
-              <img src="assets/product-spools.svg" alt="Бухты нагревательного кабеля">
-              <div>
-                <h3>Кровля и водостоки</h3>
-                <p>Резистивные секции с УФ-защитой и саморегулирующийся кабель для желобов, воронок и кромок.</p>
-                <a href="architecture.html">Смотреть группу</a>
-              </div>
-            </article>
-            <article class="solution-card">
-              <img src="assets/pipe-inside.svg" alt="Греющий кабель внутри трубы">
-              <div>
-                <h3>Трубопроводы</h3>
-                <p>Защита водопроводных и технических труб, монтаж внутри или снаружи трубы, подбор по метражу.</p>
-                <a href="architecture.html#catalog">Смотреть товары</a>
-              </div>
-            </article>
-            <article class="solution-card">
-              <img src="assets/cable-cutaway.svg" alt="Конструкция саморегулирующегося кабеля">
-              <div>
-                <h3>Промышленный обогрев</h3>
-                <p>Кабели для промышленных зон, повышенных температур и объектов с требованиями к исполнению.</p>
-                <a href="industry.html">Смотреть группу</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section calc-section" id="calculator">
+      <section class="section muted-section">
         <div class="section-inner">
           <div class="section-head compact">
-            <p class="section-kicker">Калькулятор</p>
-            <h2>Расчет нужного объема и количества</h2>
-            <p>Выберите задачу, укажите площадь или длину трассы, а затем добавьте расчет в заявку.</p>
+            <p class="section-kicker">Быстрый вход</p>
+              <h2>Быстрый подбор по категориям</h2>
           </div>
+          <div class="category-grid" id="categoryLinks"></div>
+        </div>
+      </section>
 
-          <div class="calculator-shell">
-            <div class="calc-panel">
-              <div class="segmented" role="tablist" aria-label="Тип расчета">
-                <button class="segment active" type="button" data-mode="floor">Теплый пол</button>
-                <button class="segment" type="button" data-mode="roof">Кровля</button>
-                <button class="segment" type="button" data-mode="pipe">Труба</button>
-              </div>
-
-              <form class="calc-form" id="volumeForm">
-                <div class="field-row floor-only">
-                  <label>
-                    Площадь обогрева, м2
-                    <input id="floorArea" type="number" min="0.1" step="0.1" value="12">
-                  </label>
-                  <label>
-                    Тепловая нагрузка, Вт/м2
-                    <input id="floorLoad" type="number" min="80" step="10" value="150">
-                  </label>
-                </div>
-
-                <div class="field-row roof-only hidden">
-                  <label>
-                    Длина желобов и кромок, м
-                    <input id="roofLength" type="number" min="1" step="1" value="36">
-                  </label>
-                  <label>
-                    Нитей кабеля
-                    <input id="roofLines" type="number" min="1" step="1" value="2">
-                  </label>
-                </div>
-
-                <div class="field-row pipe-only hidden">
-                  <label>
-                    Длина трубопровода, м
-                    <input id="pipeLength" type="number" min="1" step="1" value="48">
-                  </label>
-                  <label>
-                    Линий обогрева
-                    <input id="pipeLines" type="number" min="1" step="1" value="1">
-                  </label>
-                </div>
-
-                <div class="field-row">
-                  <label class="floor-only">
-                    Кабель для пола
-                    <select id="floorPower">
-                      <option value="15">15 Вт/м</option>
-                      <option value="20">20 Вт/м</option>
-                    </select>
-                  </label>
-                  <label class="roof-only hidden">
-                    Секции для кровли
-                    <select id="roofPower">
-                      <option value="30">30 Вт/м с УФ-защитой</option>
-                    </select>
-                  </label>
-                  <label class="pipe-only hidden wide">
-                    Кабель для трубы
-                    <select id="pipeProduct"></select>
-                  </label>
-                  <label>
-                    Запас, %
-                    <input id="reserve" type="number" min="0" max="40" step="1" value="10">
-                  </label>
-                </div>
-              </form>
-            </div>
-
-            <aside class="result-panel" aria-live="polite">
-              <p class="result-label">Предварительный расчет</p>
-              <div class="result-total" id="resultTotal">0 ₽</div>
-              <div class="result-grid">
-                <div>
-                  <span>Нужный объем</span>
-                  <strong id="resultVolume">0 м</strong>
-                </div>
-                <div>
-                  <span>Комплектация</span>
-                  <strong id="resultItems">-</strong>
-                </div>
-                <div>
-                  <span>Мощность</span>
-                  <strong id="resultPower">-</strong>
-                </div>
-              </div>
-              <ul class="result-list" id="resultList"></ul>
-              <button class="button primary full" type="button" id="addCalcToRequest">Добавить расчет в заявку</button>
-            </aside>
-          </div>
-
-          <div class="quantity-tool">
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head">
             <div>
-              <p class="section-kicker">Количество</p>
-              <h3>Расчет суммы по выбранной позиции</h3>
+              <p class="section-kicker">Популярные позиции</p>
+              <h2>Товары с описанием, характеристиками и формой запроса</h2>
             </div>
-            <div class="quantity-controls">
-              <label>
-                Позиция
-                <select id="productSelect"></select>
-              </label>
-              <label>
-                Количество
-                <input id="productQty" type="number" min="1" step="1" value="1">
-              </label>
-              <div class="quantity-sum">
-                <span>Сумма с НДС</span>
-                <strong id="quantityTotal">0 ₽</strong>
-              </div>
-              <div class="quantity-action">
-                <span aria-hidden="true">&nbsp;</span>
-                <button class="button secondary" type="button" id="addProductToRequest">В заявку</button>
-              </div>
+            <a class="button secondary" href="catalog.html">Весь каталог</a>
+          </div>
+          <div class="product-grid" id="featuredProducts"></div>
+        </div>
+      </section>
+
+      <section class="section dark-section process-section">
+        <div class="section-inner process-grid process-compact">
+          <div class="process-copy">
+            <p class="section-kicker">Как работаем</p>
+            <h2>От спецификации до поставки на объект</h2>
+            <p class="lead">Короткий маршрут без лишних уточнений: принимаем список, проверяем позиции, отправляем КП и организуем отгрузку.</p>
+            <div class="process-note">
+              <span>1 файл или список</span>
+              <span>КП и сроки</span>
+              <span>Документы к поставке</span>
             </div>
+          </div>
+          <div class="process-flow" aria-label="Схема работы">
+            <article class="process-step reveal">
+              <div class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+              </div>
+              <span>01</span>
+              <h3>Список</h3>
+              <p>Марки, сечения, количество или спецификация.</p>
+            </article>
+            <article class="process-step reveal">
+              <div class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/><path d="M5 20h14"/></svg>
+              </div>
+              <span>02</span>
+              <h3>Проверка</h3>
+              <p>Наличие, сроки, аналоги и документы.</p>
+            </article>
+            <article class="process-step reveal">
+              <div class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              </div>
+              <span>03</span>
+              <h3>КП</h3>
+              <p>Цена, сроки, условия поставки и замены.</p>
+            </article>
+            <article class="process-step reveal">
+              <div class="process-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><path d="M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+              </div>
+              <span>04</span>
+              <h3>Отгрузка</h3>
+              <p>Доставка, закрывающие документы и связь.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section prices-section" id="prices">
+      <section class="section">
         <div class="section-inner">
           <div class="section-head">
-            <p class="section-kicker">Прайс июнь 2026</p>
-            <h2>Цены с НДС</h2>
-            <p>В таблице показана прайсовая цена с НДС. Наличие, срок поставки и итоговую комплектацию менеджер подтверждает по заявке.</p>
+            <div>
+              <p class="section-kicker">Отрасли</p>
+              <h2>Комплектация под разные типы объектов</h2>
+            </div>
+            <a class="button secondary" href="solutions.html">Все решения</a>
           </div>
-
-          <div class="price-controls">
-            <label>
-              Поиск
-              <input id="priceSearch" type="search" placeholder="Кабель, терморегулятор, артикул">
-            </label>
-            <label>
-              Группа
-              <select id="groupFilter">
-                <option value="all">Все группы</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="table-wrap">
-            <table class="price-table">
-              <thead>
-                <tr>
-                  <th>Артикул</th>
-                  <th>Позиция</th>
-                  <th>Группа</th>
-                  <th>Ед.</th>
-                  <th>Цена с НДС</th>
-                </tr>
-              </thead>
-              <tbody id="priceBody"></tbody>
-            </table>
-          </div>
-          <div class="table-footer">
-            <span id="priceCount">0 позиций</span>
-            <button class="button secondary" type="button" id="showMore">Показать еще</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section process-section">
-        <div class="section-inner">
-          <div class="section-head compact">
-            <p class="section-kicker">Порядок работы</p>
-            <h2>От заявки до закрывающих документов</h2>
-          </div>
-          <ol class="process-list">
-            <li><span>01</span> Заявка и исходные данные</li>
-            <li><span>02</span> Подбор позиций и аналогов</li>
-            <li><span>03</span> Расчет стоимости с НДС</li>
-            <li><span>04</span> Счет и согласование отгрузки</li>
-            <li><span>05</span> УПД, ЭДО и пакет документов</li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section brief-section">
-        <div class="section-inner brief-grid">
-          <div>
-            <p class="section-kicker">Исходные данные</p>
-            <h2>Что прислать для точного расчета</h2>
-            <p>
-              Чем подробнее заявка, тем быстрее можно подобрать кабель, автоматику,
-              крепеж и оценить итоговый бюджет без лишних уточнений.
-            </p>
-            <a class="button primary" href="mailto:Head-tp@yandex.ru?subject=Исходные%20данные%20для%20расчета%20ТЕХНОПРОГРЕСС&body=Здравствуйте!%0A%0AПрошу%20подобрать%20систему%20электрообогрева.%0A%0AЗадача:%0AПлощадь%20или%20длина%20трассы:%0AТип%20объекта:%0AУсловия%20монтажа:%0AСрок%20поставки:%0AКонтакты:%0A">Отправить исходные данные</a>
-          </div>
-          <ul class="brief-list">
-            <li><b>Теплый пол</b><span>Площадь обогрева, покрытие, толщина слоя, нужен ли терморегулятор.</span></li>
-            <li><b>Кровля и водостоки</b><span>Длины желобов, труб, ендов, воронок, количество нитей кабеля.</span></li>
-            <li><b>Трубопровод</b><span>Длина, диаметр, материал трубы, утепление, монтаж снаружи или внутри.</span></li>
-            <li><b>Промышленный объект</b><span>Температуры, среда, требования к исполнению, схема трассы и питание.</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section faq-section">
-        <div class="section-inner">
-          <div class="section-head compact">
-            <p class="section-kicker">Ответы</p>
-            <h2>Частые вопросы перед заявкой</h2>
-          </div>
-          <div class="faq-grid">
-            <details open>
-              <summary>Цены на сайте с НДС?</summary>
-              <p>Да, в каталоге и таблице используются цены из колонки прайса с НДС. Итоговую стоимость подтверждаем по заявке.</p>
-            </details>
-            <details>
-              <summary>Можно рассчитать несколько помещений или участков?</summary>
-              <p>Да. В калькуляторе можно добавить расчет, а в комментарии указать несколько зон, помещений, труб или участков кровли.</p>
-            </details>
-            <details>
-              <summary>Как выбрать между резистивным и саморегулирующимся кабелем?</summary>
-              <p>Резистивный кабель удобен для типовых секций и известной длины, саморегулирующийся помогает на трассах со сложными условиями и разной теплоотдачей.</p>
-            </details>
-            <details>
-              <summary>Что входит в комплект поставки?</summary>
-              <p>Зависит от задачи: кабель или мат, датчики, терморегуляторы, муфты, коробки, крепеж и автоматика подбираются после расчета.</p>
-            </details>
-            <details>
-              <summary>Можно заказать обратный звонок?</summary>
-              <p>Да, нажмите кнопку обратного звонка или позвоните по номеру +7 342 207-10-20.</p>
-            </details>
-            <details>
-              <summary>Работаете с юридическими лицами?</summary>
-              <p>Да, можно запросить счет, УПД, ЭДО и пакет документов для закупки.</p>
-            </details>
-          </div>
+          <div class="solution-grid" id="solutionCards"></div>
         </div>
       </section>
 
       <section class="section request-section" id="request">
         <div class="section-inner request-grid">
-          <div>
+          <div class="request-copy reveal">
             <p class="section-kicker">Заявка</p>
-            <h2>Получите расчет под ваш объект</h2>
-            <p>
-              Добавьте расчет из калькулятора или выбранные позиции, оставьте контакты,
-              и письмо с заявкой уйдет на почту отдела продаж.
-            </p>
-            <div class="contact-stack">
+            <h2>Получите КП по спецификации или списку позиций</h2>
+            <p>Прикрепите файл или опишите задачу. Если конкретной марки нет, отметьте подбор аналога.</p>
+            <div class="request-contact">
               <a href="tel:+73422071020">+7 342 207-10-20</a>
-              <a href="tel:+79922121369">+7 992 212-13-69</a>
               <a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a>
             </div>
-            <address>
-              ООО &laquo;ТЕХНОПРОГРЕСС&raquo;<br>
-              ИНН 5907048846, ОГРН 1205900029543<br>
-              Пермь, ул. Ново-Гайвинская, 102, офис 31
-            </address>
           </div>
-
-          <form class="request-form" id="requestForm">
-            <label>
-              Имя
-              <input id="clientName" name="name" type="text" autocomplete="name" required>
-            </label>
-            <label>
-              Телефон
-              <input id="clientPhone" name="phone" type="tel" autocomplete="tel" required>
-            </label>
-            <label>
-              Email
-              <input id="clientEmail" name="email" type="email" autocomplete="email">
-            </label>
-            <label>
-              Что нужно рассчитать
-              <textarea id="clientComment" name="comment" rows="5" placeholder="Например: теплый пол 18 м2 или обогрев водостоков 42 м"></textarea>
-            </label>
-            <div class="request-summary" id="requestSummary">Расчет и позиции пока не добавлены.</div>
-            <div class="form-actions">
-              <button class="button primary" type="submit">Отправить заявку на почту</button>
-              <button class="button secondary" type="button" data-callback>Заказать обратный звонок</button>
-            </div>
-          </form>
+          <div data-request-slot></div>
         </div>
       </section>
     </main>
@@ -465,11 +227,17 @@
     <footer class="site-footer">
       <div>
         <img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС">
-        <p>Электрообогрев, кабель, комплектующие и промышленная комплектация.</p>
+        <p>Кабельно-проводниковая и электротехническая продукция для промышленных, строительных и инфраструктурных объектов.</p>
       </div>
-      <div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="supply.html">Поставка под проект</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="offer.html">Оферта</a></div>
+      <div class="footer-contact">
         <a href="tel:+73422071020">+7 342 207-10-20</a>
         <a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a>
+        <span>ИНН 5907048846, ОГРН 1205900029543</span>
       </div>
     </footer>
   </body>

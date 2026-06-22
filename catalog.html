@@ -3,95 +3,84 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Каталог ТЕХНОПРОГРЕСС - товары и цены с НДС</title>
-    <meta name="description" content="Полный каталог продукции ТЕХНОПРОГРЕСС: теплые полы, кровельный обогрев, трубопроводы, промышленные кабели, терморегуляторы и комплектующие с ценами с НДС.">
+    <title>Каталог кабеля и электротехники - ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Каталог ООО ТЕХНОПРОГРЕСС: силовой кабель, контрольный кабель, СИП, пожарный кабель, автоматы, щитовое оборудование, кабельные лотки и электромонтажные изделия.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="data/products.js" defer></script>
-    <script src="catalog.js" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Каталог продукции ТЕХНОПРОГРЕСС",
-        "url": "https://taptrans13-commits.github.io/-/catalog.html",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "ТЕХНОПРОГРЕСС",
-          "url": "https://taptrans13-commits.github.io/-/"
-        }
-      }
-    </script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
-  <body class="inner-page catalog-page" data-catalog-type="all">
+  <body class="inner-page catalog-page">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС">
-        <img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС">
-      </a>
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav-links" aria-label="Основная навигация">
-        <a class="" href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a class="" href="floor.html">Теплые полы</a><a class="" href="architecture.html">Кровля и трубы</a><a class="" href="industry.html">Промобогрев</a><a class="" href="contacts.html">Контакты</a>
+        <a href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
       </nav>
-      <a class="header-phone" href="tel:+73422071020" aria-label="Позвонить в ТЕХНОПРОГРЕСС">+7 342 207-10-20</a>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
     </header>
-    <main id="top">
-      <section class="page-hero catalog-hero">
+    <main>
+      <section class="page-hero">
         <div class="section-inner page-hero-inner">
-          <p class="eyebrow">Полный каталог</p>
-          <h1>Каталог продукции с ценами с НДС</h1>
-          <p>302 позиции из актуального прайса: полные наименования, артикулы, маркировки, единицы отгрузки и карточки по группам применения.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#catalog">Смотреть товары</a>
-            <a class="button light" href="tel:+73422071020">Позвонить</a>
-            <a class="button ghost" href="index.html#calculator">Рассчитать объем</a>
+          <p class="eyebrow">Каталог</p>
+          <h1>Каталог кабеля, проводов, муфт и электротехники</h1>
+          <p>Откройте раздел каталога, провалитесь в полный список марконаименований и отправьте точную позицию через форму запроса.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner catalog-shell">
+          <aside class="catalog-sidebar reveal" aria-label="Навигация по каталогу">
+            <div class="catalog-side-block">
+              <p class="section-kicker">Каталог</p>
+              <h2>Разделы</h2>
+              <div class="side-category-list" id="sideCategoryList"></div>
+            </div>
+            <div class="catalog-side-block">
+              <h2>Фильтры</h2>
+              <div class="catalog-toolbar">
+                <label>Поиск по марке или задаче<input id="catalogSearch" placeholder="ВВГнг-LS, КВТп, СИП, лотки, пожарная сигнализация"></label>
+                <label>Направление<select id="kindFilter"></select></label>
+                <label>Категория<select id="categoryFilter"></select></label>
+                <label>Напряжение<select id="voltageFilter"></select></label>
+                <label>Назначение
+                  <select id="purposeFilter">
+                    <option value="all">Любое</option>
+                    <option value="зем">Прокладка в земле</option>
+                    <option value="пожар">Пожарная безопасность</option>
+                    <option value="щит">Щитовое оборудование</option>
+                    <option value="промышлен">Промышленность</option>
+                    <option value="воздуш">Воздушные линии</option>
+                    <option value="скс">СКС и связь</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </aside>
+          <div class="catalog-content">
+            <div class="catalog-status">
+              <p class="section-kicker" id="catalogCount">0 позиций</p>
+              <a class="button secondary" href="#request">Отправить спецификацию</a>
+            </div>
+            <div class="product-grid catalog-grid" id="catalogGrid"></div>
           </div>
         </div>
       </section>
-
-      <section class="section catalog-overview">
-        <div class="section-inner">
-          <div class="section-head compact">
-            <p class="section-kicker">Группы</p>
-            <h2>Подбор по задаче объекта</h2>
-            <p>Каждая группа содержит описание применения и карточки товаров из прайса.</p>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal">
+            <p class="section-kicker">Нет нужной позиции?</p>
+            <h2>Загрузите спецификацию - подберем вручную</h2>
+            <p>Можно отправить смету, ведомость, проектный список, фото таблички или набор марок в свободной форме.</p>
           </div>
-          <div class="catalog-group-cards" id="catalogGroupCards"></div>
-        </div>
-      </section>
-
-      <section class="section catalog-section" id="catalog">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="section-kicker">Карточки товаров</p>
-            <h2>Продукция по группам и категориям</h2>
-            <p>Используйте поиск по артикулу, маркировке или названию. В карточках указана прайсовая цена с НДС.</p>
-          </div>
-          <div class="catalog-controls">
-            <label>Поиск <input id="catalogSearch" type="search" placeholder="Артикул, маркировка, название"></label>
-            <label>Группа <select id="catalogGroupFilter"></select></label>
-            <label>Категория <select id="catalogCategoryFilter"></select></label>
-            <label>
-              Сортировка
-              <select id="catalogSort">
-                <option value="default">По группам</option>
-                <option value="price-asc">Сначала дешевле</option>
-                <option value="price-desc">Сначала дороже</option>
-                <option value="name">По названию</option>
-              </select>
-            </label>
-          </div>
-          <div class="catalog-count" id="catalogCount">0 позиций</div>
-          <div class="catalog-grid" id="catalogGrid"></div>
+          <div data-request-slot></div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <div>
-        <img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС">
-        <p>Электрообогрев, кабель, комплектующие и промышленная комплектация.</p>
-      </div>
-      <div>
-        <a href="tel:+73422071020">+7 342 207-10-20</a>
-        <a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a>
-      </div>
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Комплексная поставка кабеля и электротехники.</p></div>
+      <div class="footer-links"><a href="index.html">Главная</a><a href="supply.html">Поставка</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
     </footer>
   </body>
 </html>

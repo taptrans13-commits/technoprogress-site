@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Справочник по кабелю - ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Справочник по кабелю: маркировка, подбор сечения, различия нг-LS и FRLS, выбор аналогов и требования к проектной спецификации.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a class="active" href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="section-inner page-hero-inner">
+          <p class="eyebrow">SEO-справочник</p>
+          <h1>Материалы для выбора кабеля и электротехники</h1>
+          <p>Справочные страницы помогают пользователю разобраться в маркировке, сечении, пожарных исполнениях и подборе аналогов.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner feature-grid">
+          <a class="feature-card reveal" href="catalog.html">
+            <span>Каталог</span>
+            <h3>Конкретные позиции и марки</h3>
+            <p>Разделы, марконаименования, характеристики, наличие, цена по запросу и заявка на КП.</p>
+          </a>
+          <a class="feature-card reveal" href="#calculators">
+            <span>Справочник</span>
+            <h3>Расчеты и выбор</h3>
+            <p>Калькуляторы, объяснение маркировки, подбор сечения, пожарных исполнений и аналогов.</p>
+          </a>
+          <a class="feature-card reveal" href="#request">
+            <span>Заявка</span>
+            <h3>Если нет точной марки</h3>
+            <p>Опишите задачу или приложите спецификацию, чтобы получить подбор и коммерческое предложение.</p>
+          </a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="article-grid" id="articleCards"></div>
+        </div>
+      </section>
+      <section class="section muted-section" id="calculators">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Калькуляторы</p>
+              <h2>Быстрые расчеты для заявки</h2>
+            </div>
+            <a class="button secondary" href="catalog.html">Перейти в каталог</a>
+          </div>
+          <div class="calculator-grid">
+            <form class="calc-card reveal" data-calc="voltage-drop">
+              <h3>Падение напряжения</h3>
+              <div class="field-grid">
+                <label>Сеть<select name="phase"><option value="3">3 фазы</option><option value="1">1 фаза</option></select></label>
+                <label>Напряжение, В<input name="voltage" type="number" value="380" min="1"></label>
+                <label>Мощность, кВт<input name="power" type="number" value="15" min="0" step="0.1"></label>
+                <label>Длина линии, м<input name="length" type="number" value="50" min="0" step="1"></label>
+                <label>Сечение, мм2<input name="section" type="number" value="10" min="0.5" step="0.5"></label>
+                <label>Материал<select name="material"><option value="0.018">Медь</option><option value="0.029">Алюминий</option></select></label>
+              </div>
+              <p class="calc-result" data-calc-result></p>
+            </form>
+            <form class="calc-card reveal" data-calc="mass">
+              <h3>Вес и бюджет кабеля</h3>
+              <div class="field-grid">
+                <label>Длина, м<input name="length" type="number" value="500" min="0"></label>
+                <label>Вес, кг/км<input name="kgkm" type="number" value="420" min="0"></label>
+                <label>Цена за метр, ₽<input name="price" type="number" value="0" min="0" step="0.01"></label>
+                <label>Запас, %<input name="reserve" type="number" value="3" min="0" step="0.5"></label>
+              </div>
+              <p class="calc-result" data-calc-result></p>
+            </form>
+            <form class="calc-card reveal" data-calc="metal">
+              <h3>Металл в кабеле</h3>
+              <div class="field-grid">
+                <label>Жил<input name="cores" type="number" value="4" min="1"></label>
+                <label>Сечение, мм2<input name="section" type="number" value="16" min="0.5" step="0.5"></label>
+                <label>Длина, м<input name="length" type="number" value="100" min="0"></label>
+                <label>Материал<select name="density"><option value="8.96">Медь</option><option value="2.7">Алюминий</option></select></label>
+              </div>
+              <p class="calc-result" data-calc-result></p>
+            </form>
+            <form class="calc-card reveal" data-calc="mufta">
+              <h3>Подбор муфты</h3>
+              <div class="field-grid">
+                <label>Напряжение<select name="voltage"><option value="1">1 кВ</option><option value="10">6-10 кВ</option><option value="20">20 кВ</option><option value="35">35 кВ</option></select></label>
+                <label>Тип<select name="type"><option value="end-inside">Концевая внутренняя</option><option value="end-outside">Концевая наружная</option><option value="joint">Соединительная</option><option value="transition">Переходная</option><option value="repair">Ремонтная</option></select></label>
+                <label>Броня<select name="armor"><option value="no">Без брони</option><option value="yes">Бронированный кабель</option></select></label>
+                <label>Изоляция<select name="insulation"><option value="plastic">Пластмассовая / СПЭ</option><option value="paper">Бумажная</option></select></label>
+              </div>
+              <p class="calc-result" data-calc-result></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="mark-directory">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Справочник марок</p>
+              <h2>Разделы с номенклатурой</h2>
+            </div>
+            <a class="button secondary" href="catalog.html">Открыть все</a>
+          </div>
+          <div class="category-grid" id="markDirectory"></div>
+        </div>
+      </section>
+      <section class="section muted-section">
+        <div class="section-inner two-column">
+          <div class="reveal">
+            <p class="section-kicker">Посадочные страницы</p>
+            <h2>Что стоит развивать дальше для SEO</h2>
+            <p>На базе каталога можно расширить сайт отдельными страницами под каждую марку, отрасль и задачу.</p>
+          </div>
+          <ul class="check-list reveal">
+            <li>Купить кабель ВВГнг-LS</li>
+            <li>Кабель для прокладки в земле</li>
+            <li>Кабель для пожарной сигнализации</li>
+            <li>СИП для воздушных линий</li>
+            <li>Кабель и лотки для промышленных объектов</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal"><p class="section-kicker">Не знаете марку?</p><h2>Опишите задачу - подберем вариант</h2><p>Напишите условия прокладки, нагрузку, объект и требования к пожарному исполнению.</p></div>
+          <div data-request-slot></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Справочник для выбора кабеля и подготовки заявки.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="supply.html">Поставка</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
+    </footer>
+  </body>
+</html>

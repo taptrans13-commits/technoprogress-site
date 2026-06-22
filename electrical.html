@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Электротехническая продукция - ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Электротехническая продукция: автоматические выключатели, УЗО, контакторы, щиты, кабельные лотки, наконечники, гильзы, муфты и монтажные изделия.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </header>
+    <main>
+      <section class="page-hero electrical-hero">
+        <div class="section-inner page-hero-inner split-hero-grid">
+          <div>
+            <p class="eyebrow">Электротехника</p>
+            <h1>Электротехническая продукция для комплектной поставки</h1>
+            <p>Закрываем не только кабельную часть, но и защиту, коммутацию, щиты, кабельные трассы и монтажные изделия.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="catalog.html?kind=electrical">Смотреть электротехнику</a>
+              <a class="button light" href="#request">Отправить список</a>
+            </div>
+          </div>
+          <img src="assets/electrical-switchgear.png" alt="Электротехническое щитовое оборудование">
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head compact">
+            <p class="section-kicker">Комплектация</p>
+            <h2>Что можно отправить в запрос</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal"><h3>Защита и коммутация</h3><p>Автоматы, УЗО, дифавтоматы, контакторы, пускатели, реле и аксессуары.</p><a href="catalog.html?kind=electrical&category=zashchita-i-kommutatsiya">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Щитовое оборудование</h3><p>Корпуса, шкафы, боксы, шины, клеммы, DIN-рейки, панели и комплектующие.</p><a href="catalog.html?kind=electrical&category=shchitovoe-oborudovanie">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Кабеленесущие системы</h3><p>Лотки, короба, лестничные системы, крышки, крепеж, подвесы и монтажные элементы.</p><a href="catalog.html?kind=electrical&category=kabelenesushchie-sistemy">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Монтажные изделия</h3><p>Наконечники, гильзы, муфты, кабельные вводы, маркировка и расходные материалы.</p><a href="catalog.html?kind=electrical&category=montazhnye-izdeliya">Открыть</a></article>
+          </div>
+        </div>
+      </section>
+      <section class="section dark-section">
+        <div class="section-inner two-column">
+          <div class="reveal">
+            <p class="section-kicker">Плюс к кабелю</p>
+            <h2>Удобно для снабжения и монтажа</h2>
+            <p class="lead">В одной заявке можно собрать кабель, лотки, аппараты защиты, щитовые комплектующие и расходные материалы. Это снижает число поставщиков и упрощает контроль документов.</p>
+          </div>
+          <ul class="check-list light-list reveal">
+            <li>Подбор по проектной спецификации</li>
+            <li>Замена устаревших или отсутствующих позиций</li>
+            <li>Комплектация монтажных узлов</li>
+            <li>Подготовка документов для согласования и закрытия</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal"><p class="section-kicker">Заявка</p><h2>Собрать электротехнику по списку</h2><p>Отправьте файл, перечень аппаратов или описание щита.</p></div>
+          <div data-request-slot></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Электротехническая продукция для комплексной поставки.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="supply.html">Поставка</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
+    </footer>
+  </body>
+</html>

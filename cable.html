@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кабельно-проводниковая продукция - ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Силовой, контрольный, монтажный, гибкий, огнестойкий кабель, СИП, витая пара и оптический кабель от ООО ТЕХНОПРОГРЕСС. Заявка на КП и подбор аналогов.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </header>
+    <main>
+      <section class="page-hero cable-hero">
+        <div class="section-inner page-hero-inner split-hero-grid">
+          <div>
+            <p class="eyebrow">Кабель и провод</p>
+            <h1>Кабельно-проводниковая продукция под проектные требования</h1>
+            <p>Подбираем кабель по марке, сечению, напряжению, пожарному исполнению, условиям прокладки и требуемым документам.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="catalog.html?kind=cable">Смотреть кабель</a>
+              <a class="button light" href="#request">Получить подбор</a>
+            </div>
+          </div>
+          <img src="assets/cable-macro.png" alt="Силовые кабели в разрезе">
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-head compact">
+            <p class="section-kicker">Разделы</p>
+            <h2>Основные группы кабеля</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal"><h3>Силовой кабель 0,66/1 кВ</h3><p>ВВГнг-LS, АВВГнг-LS, ВБШвнг-LS и другие исполнения для питания зданий, оборудования и инфраструктуры.</p><a href="catalog.html?kind=cable&category=silovoy-kabel">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Контрольный кабель</h3><p>КВВГ, КВВГЭ, бронированные и экранированные исполнения для управления, сигнализации и КИП.</p><a href="catalog.html?kind=cable&category=kontrolnyy-kabel">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Монтажный провод</h3><p>ПуГВ, ПВС и другие провода для щитов, шкафов, оборудования, внутреннего монтажа и подключения.</p><a href="catalog.html?kind=cable&category=montazhnyy-provod">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Огнестойкий кабель</h3><p>FRLS, LS, HF и специальные исполнения для пожарной сигнализации, СОУЭ и ответственных систем.</p><a href="catalog.html?kind=cable&category=pozharnyy-kabel">Открыть</a></article>
+            <article class="feature-card reveal"><h3>СИП и наружные линии</h3><p>Самонесущие изолированные провода и решения для воздушных линий, вводов и наружных сетей.</p><a href="catalog.html?kind=cable">Открыть</a></article>
+            <article class="feature-card reveal"><h3>Связь, оптика, СКС</h3><p>Витая пара, оптический кабель, кабели связи и решения для сетей, ЦОД, видеонаблюдения и диспетчеризации.</p><a href="catalog.html?kind=cable&category=svyaz-i-seti">Открыть</a></article>
+          </div>
+        </div>
+      </section>
+      <section class="section muted-section">
+        <div class="section-inner two-column">
+          <div class="reveal">
+            <p class="section-kicker">Подбор</p>
+            <h2>Что нужно указать для точного КП</h2>
+            <ul class="check-list">
+              <li>Марка кабеля и требуемый ГОСТ/ТУ</li>
+              <li>Сечение, количество жил, материал жилы</li>
+              <li>Напряжение и пожарное исполнение</li>
+              <li>Метраж, город доставки и желаемый срок</li>
+              <li>Условия прокладки: земля, лоток, труба, воздух, помещение</li>
+            </ul>
+          </div>
+          <div class="info-panel reveal">
+            <h3>Можно отправить без подготовки</h3>
+            <p>Если спецификация большая или в ней есть устаревшие марки, отправьте файл как есть. Мы разберем позиции, отметим спорные места и предложим возможные аналоги.</p>
+            <a class="button primary" href="#request">Загрузить спецификацию</a>
+          </div>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal"><p class="section-kicker">Заявка</p><h2>Подобрать кабель по задаче</h2><p>Опишите проект или приложите файл. Ответ подготовим на почту.</p></div>
+          <div data-request-slot></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Силовые, контрольные, монтажные, огнестойкие и специальные кабели.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поставка под проект - ТЕХНОПРОГРЕСС</title>
+    <meta name="description" content="Комплексная поставка кабельно-проводниковой и электротехнической продукции по проектной спецификации, смете или ведомости. Подбор аналогов и КП.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/products.js" defer></script>
+    <script src="data/mark-items.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ТЕХНОПРОГРЕСС"><img src="assets/logo-black.svg" alt="ТЕХНОПРОГРЕСС"></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a class="active" href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </header>
+    <main>
+      <section class="page-hero supply-hero">
+        <div class="section-inner page-hero-inner">
+          <p class="eyebrow">Поставка под проект</p>
+          <h1>Разберем спецификацию, найдем позиции и подготовим КП</h1>
+          <p>Работаем с ведомостями, сметами, проектными марками, устаревшими позициями и задачами, где нужен подбор аналогов.</p>
+          <div class="hero-actions"><a class="button primary" href="#request">Загрузить спецификацию</a><a class="button light" href="catalog.html">Открыть каталог</a></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner process-grid">
+          <div class="reveal">
+            <p class="section-kicker">Маршрут заявки</p>
+            <h2>Понятная схема для снабжения</h2>
+            <p class="lead">Форма собирает данные, которые обычно все равно приходится уточнять в переписке.</p>
+          </div>
+          <ol class="process-list clean">
+            <li><span>01</span><strong>Файл или список</strong><p>Загрузите XLS, PDF, DOC, фото или вставьте позиции вручную.</p></li>
+            <li><span>02</span><strong>Техническая проверка</strong><p>Сверяем марки, сечения, исполнение, документы и условия прокладки.</p></li>
+            <li><span>03</span><strong>Коммерческое предложение</strong><p>Готовим КП с уточнением сроков, аналогов и спорных позиций.</p></li>
+            <li><span>04</span><strong>Поставка и документы</strong><p>Согласуем отгрузку, город доставки и комплект закрывающих документов.</p></li>
+          </ol>
+        </div>
+      </section>
+      <section class="section muted-section">
+        <div class="section-inner feature-grid">
+          <article class="feature-card reveal"><h3>Подбор аналогов</h3><p>Если нужной марки нет или она заменена, подбираем вариант по электрическим, пожарным и эксплуатационным требованиям.</p></article>
+          <article class="feature-card reveal"><h3>Комплексная поставка</h3><p>Кабель, лотки, автоматы, щиты, наконечники и расходники можно собрать в одной заявке.</p></article>
+          <article class="feature-card reveal"><h3>Документы</h3><p>По запросу включаем паспорта, сертификаты, декларации и документы для закрытия поставки.</p></article>
+        </div>
+      </section>
+      <section class="section request-section" id="request">
+        <div class="section-inner request-grid">
+          <div class="request-copy reveal"><p class="section-kicker">Спецификация</p><h2>Отправить список на расчет</h2><p>Укажите компанию, ИНН, город доставки и желаемый срок ответа.</p></div>
+          <div data-request-slot></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><img src="assets/logo-white.svg" alt="ТЕХНОПРОГРЕСС"><p>Поставка по проектным спецификациям и сметам.</p></div>
+      <div class="footer-links"><a href="catalog.html">Каталог</a><a href="guide.html">Справочник</a><a href="contacts.html">Контакты</a><a href="offer.html">Оферта</a></div>
+      <div class="footer-contact"><a href="tel:+73422071020">+7 342 207-10-20</a><a href="mailto:Head-tp@yandex.ru">Head-tp@yandex.ru</a></div>
+    </footer>
+  </body>
+</html>
