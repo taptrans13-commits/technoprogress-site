@@ -1,0 +1,626 @@
+:root {
+  --ink: #1c1916;
+  --graphite: #37312b;
+  --panel: #2a2520;
+  --muted: #756a5c;
+  --line: #b9aa91;
+  --paper: #efe4cd;
+  --white: #f7efdf;
+  --copper: #a81616;
+  --red: #a81616;
+  --blue: #37312b;
+  --green: #48533d;
+  --shadow: 8px 8px 0 rgba(55, 49, 43, 0.16);
+  --radius: 0;
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(55, 49, 43, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(55, 49, 43, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 20% 10%, rgba(168, 22, 22, 0.04), transparent 28rem);
+  background-size: 24px 24px, 24px 24px, auto;
+  font-family: "Arial Narrow", "Roboto Condensed", "PT Sans Narrow", Arial, sans-serif;
+}
+
+main { counter-reset: technical-section; }
+
+h1,
+h2,
+h3,
+.brand,
+.nav-links,
+.header-phone,
+.button,
+.product-meta,
+.category-tile span,
+.product-article,
+.mark-table th {
+  font-family: Impact, "Arial Narrow", "Roboto Condensed", "PT Sans Narrow", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 { text-wrap: balance; }
+
+.site-header {
+  min-height: 74px;
+  padding-block: 10px;
+  background: rgba(239, 228, 205, 0.97);
+  border-bottom: 3px solid var(--ink);
+  backdrop-filter: none;
+}
+
+.brand {
+  padding: 7px 9px;
+  border: 1px solid var(--ink);
+  background: rgba(247, 239, 223, 0.9);
+}
+
+.nav-links {
+  color: var(--graphite);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-links a::after {
+  height: 4px;
+  background: var(--red);
+}
+
+.header-phone {
+  padding: 7px 10px;
+  color: var(--paper);
+  background: var(--ink);
+  letter-spacing: 0.035em;
+}
+
+.hero {
+  min-height: min(82svh, 760px);
+  color: var(--ink);
+  background: var(--paper);
+  border-bottom: 10px solid var(--red);
+}
+
+.hero::before {
+  content: "ТП / 01";
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  right: clamp(18px, 4vw, 54px);
+  padding: 7px 10px;
+  color: var(--paper);
+  background: var(--red);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.hero::after { display: none; }
+
+.hero-media {
+  inset: 0 0 0 52%;
+  border-left: 3px solid var(--ink);
+  background:
+    linear-gradient(rgba(168, 22, 22, 0.25), rgba(168, 22, 22, 0.25)),
+    url("assets/hero-cable-warehouse.png") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.25) sepia(0.35);
+  mix-blend-mode: multiply;
+  opacity: 0.78;
+  transform: none;
+}
+
+.hero-inner { padding: 72px 0 54px; }
+
+.eyebrow,
+.section-kicker {
+  color: var(--red);
+  font-weight: 950;
+  letter-spacing: 0.14em;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-family: Impact, "Arial Narrow", "Roboto Condensed", sans-serif;
+  font-size: clamp(56px, 7.4vw, 108px);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.hero h1 em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.hero-copy {
+  max-width: 620px;
+  color: var(--graphite);
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+}
+
+.hero-facts { max-width: 760px; }
+
+.hero-facts div {
+  padding: 12px;
+  border: 1px solid var(--ink);
+  background: rgba(239, 228, 205, 0.85);
+}
+
+.hero-facts dd { color: var(--graphite); }
+
+.button {
+  min-height: 48px;
+  padding: 12px 17px;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.button.primary {
+  color: var(--paper);
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.button.light,
+.button.ghost,
+.button.secondary {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: transparent;
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.button.primary:hover { background: #861010; }
+
+.button.ghost:hover,
+.button.light:hover,
+.button.secondary:hover {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.section {
+  position: relative;
+  counter-increment: technical-section;
+  border-bottom: 2px solid rgba(55, 49, 43, 0.46);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(18px, calc((100% - var(--max)) / 2));
+  width: min(110px, 16vw);
+  height: 6px;
+  background: var(--red);
+}
+
+.section-kicker::before {
+  content: counter(technical-section, decimal-leading-zero) " / ";
+  color: var(--ink);
+}
+
+.section-head h2,
+.request-copy h2,
+.detail-panel h2,
+.legal-content h2,
+.contact-card h2,
+.page-hero h1,
+.product-main h1,
+.process-copy h2 {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.section-head h2,
+.request-copy h2 { font-size: clamp(42px, 5vw, 72px); }
+
+.intro-band {
+  background: var(--paper);
+  border-bottom-color: var(--ink);
+}
+
+.intro-points span {
+  position: relative;
+  padding-left: 28px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: rgba(247, 239, 223, 0.72);
+}
+
+.intro-points span::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+}
+
+.muted-section {
+  background-color: #e5d7bc;
+  background-image: repeating-linear-gradient(135deg, transparent 0 11px, rgba(55, 49, 43, 0.035) 11px 12px);
+}
+
+.direction-card {
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 rgba(55, 49, 43, 0.2);
+}
+
+.direction-card img {
+  filter: grayscale(1) contrast(1.25) sepia(0.32);
+  opacity: 0.72;
+}
+
+.direction-card::after {
+  background: linear-gradient(0deg, rgba(28, 25, 22, 0.94), rgba(28, 25, 22, 0.02) 76%);
+}
+
+.direction-card span,
+.solution-card span {
+  color: #e2503e;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+}
+
+.direction-card h3 { text-transform: uppercase; }
+
+.category-tile,
+.feature-card,
+.solution-card,
+.article-card,
+.contact-card,
+.detail-panel,
+.info-panel,
+.request-form,
+.product-card,
+.catalog-category-card,
+.mark-family-card,
+.mark-mini-card,
+.search-result-panel,
+.mark-family-panel,
+.family-detail-panel,
+.mark-table-wrap,
+.catalog-side-block,
+.calc-card,
+.legal-content {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: rgba(247, 239, 223, 0.92);
+  box-shadow: none;
+}
+
+.category-tile,
+.feature-card,
+.solution-card,
+.article-card,
+.contact-card,
+.product-card,
+.catalog-category-card,
+.mark-family-card,
+.mark-mini-card,
+.calc-card { position: relative; }
+
+.category-tile::before,
+.feature-card::before,
+.solution-card::before,
+.article-card::before,
+.contact-card::before,
+.product-card::before,
+.catalog-category-card::before,
+.mark-family-card::before,
+.mark-mini-card::before,
+.calc-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  left: -1px;
+  width: 42px;
+  height: 7px;
+  background: var(--red);
+}
+
+.category-tile:hover,
+.feature-card:hover,
+.product-card:hover,
+.solution-card:hover,
+.catalog-category-card:hover,
+.mark-mini-card:hover,
+.mark-family-card:hover {
+  border-color: var(--red);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 rgba(168, 22, 22, 0.2);
+}
+
+.category-tile strong,
+.product-card h3,
+.feature-card h3,
+.solution-card h3,
+.article-card h3,
+.mark-family-card h3,
+.mark-mini-card h3,
+.calc-card h3 { text-transform: uppercase; }
+
+.category-tile small,
+.mark-card-link,
+.feature-card a,
+.solution-card a,
+.article-card a,
+.price-request-link,
+.mark-table-head span,
+.mark-name-link:hover { color: var(--red); }
+
+.product-image-link,
+.product-visual,
+.split-hero-grid img {
+  border-radius: 0;
+  background: #c7b99f;
+}
+
+.product-image-link img,
+.product-visual img,
+.split-hero-grid img {
+  filter: grayscale(1) sepia(0.42) contrast(1.18);
+  mix-blend-mode: multiply;
+}
+
+.tag-row span,
+.tag-row.strong span,
+.process-note span {
+  border: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+}
+
+.dark-section {
+  color: var(--paper);
+  background:
+    linear-gradient(rgba(28, 25, 22, 0.94), rgba(28, 25, 22, 0.94)),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(239, 228, 205, 0.07) 47px 48px),
+    var(--ink);
+  border-block: 10px solid var(--red);
+}
+
+.dark-section .section-kicker::before,
+.request-section .section-kicker::before { color: var(--paper); }
+
+.process-flow::before {
+  height: 3px;
+  background: var(--red);
+}
+
+.process-step {
+  border: 1px solid rgba(239, 228, 205, 0.58);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.process-icon {
+  border: 2px solid var(--red);
+  border-radius: 0;
+  background: transparent;
+}
+
+.process-icon svg { stroke: var(--paper); }
+.process-step span { color: #e2503e; }
+
+.page-hero {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(239, 228, 205, 0.98) 0 58%, rgba(239, 228, 205, 0.3) 82%),
+    url("assets/hero-cable-warehouse.png") center / cover no-repeat;
+  border-bottom: 10px solid var(--red);
+}
+
+.electrical-hero {
+  background:
+    linear-gradient(90deg, rgba(239, 228, 205, 0.98) 0 58%, rgba(239, 228, 205, 0.28) 82%),
+    url("assets/electrical-switchgear.png") center / cover no-repeat;
+}
+
+.page-hero::before {
+  content: "ТЕХНИЧЕСКИЙ КАТАЛОГ / 2026";
+  position: absolute;
+  top: 24px;
+  right: clamp(18px, 4vw, 54px);
+  padding: 6px 9px;
+  color: var(--paper);
+  background: var(--red);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.page-hero::after { display: none; }
+.page-hero h1 { font-size: clamp(48px, 6vw, 88px); }
+
+.page-hero p:not(.eyebrow),
+.page-hero .lead {
+  color: var(--graphite);
+  font-weight: 700;
+}
+
+.catalog-sidebar { scrollbar-color: var(--red) var(--paper); }
+
+.side-category-link {
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+}
+
+.side-category-link:hover,
+.side-category-link.active {
+  color: var(--paper);
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.side-category-link:hover small,
+.side-category-link.active small { color: rgba(247, 239, 223, 0.78); }
+
+label {
+  color: var(--graphite);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--white);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--red);
+  box-shadow: 4px 4px 0 rgba(168, 22, 22, 0.16);
+}
+
+.mark-table th {
+  color: var(--paper);
+  background: var(--ink);
+  letter-spacing: 0.08em;
+}
+
+.mark-table tr:hover td,
+.mark-row:focus-visible td,
+.mark-row:hover td { background: #e4d4b5; }
+
+.spec-table th,
+.spec-table td,
+.mark-table th,
+.mark-table td { border-color: var(--line); }
+
+.check-list li::before { border-radius: 0; }
+
+.request-section {
+  color: var(--paper);
+  background:
+    linear-gradient(120deg, rgba(28, 25, 22, 0.98), rgba(55, 49, 43, 0.94)),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(239, 228, 205, 0.06) 47px 48px);
+  border-block: 10px solid var(--red);
+}
+
+.request-form { background: var(--paper); }
+
+.channel-choice {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: #e7d9bd;
+}
+
+.channel-option {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+}
+
+.channel-option:has(input:checked) {
+  border-color: var(--red);
+  box-shadow: 4px 4px 0 rgba(168, 22, 22, 0.16);
+}
+
+.calc-result {
+  border-left: 7px solid var(--red);
+  border-radius: 0;
+  background: #dfd0b3;
+}
+
+.site-footer {
+  color: rgba(247, 239, 223, 0.74);
+  background-color: var(--ink);
+  background-image: repeating-linear-gradient(90deg, transparent 0 47px, rgba(239, 228, 205, 0.06) 47px 48px);
+  border-top: 10px solid var(--red);
+}
+
+.site-footer img {
+  padding: 9px;
+  background: var(--paper);
+}
+
+.footer-links a,
+.footer-contact a { text-transform: uppercase; }
+
+.reveal {
+  transform: translateY(10px);
+  transition-duration: 0.32s;
+}
+
+@media (max-width: 1120px) {
+  .nav-toggle,
+  .nav-links { border-radius: 0; }
+
+  .nav-links {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 rgba(55, 49, 43, 0.2);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-media {
+    inset: 0;
+    border-left: 0;
+    opacity: 0.18;
+  }
+
+  .page-hero,
+  .electrical-hero {
+    background:
+      linear-gradient(rgba(239, 228, 205, 0.9), rgba(239, 228, 205, 0.9)),
+      url("assets/hero-cable-warehouse.png") center / cover no-repeat;
+  }
+
+  .hero-facts { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .site-header { min-height: 68px; }
+
+  .brand {
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .hero::before,
+  .page-hero::before {
+    top: 16px;
+    right: 14px;
+  }
+
+  .hero-inner { padding-top: 88px; }
+  .hero h1 {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 0.88;
+  }
+  .hero-actions { gap: 9px; }
+
+  .section-head h2,
+  .request-copy h2 { font-size: clamp(38px, 11vw, 54px); }
+
+  .page-hero h1 { font-size: clamp(42px, 12vw, 60px); }
+  .direction-card { box-shadow: 5px 5px 0 rgba(55, 49, 43, 0.2); }
+}
