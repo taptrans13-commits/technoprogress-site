@@ -1,12 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 140" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 170" role="img" aria-labelledby="title desc">
   <title id="title">ТЕХНОПРОГРЕСС</title>
-  <rect width="760" height="140" fill="#f6f7f5"/>
-  <g fill="#f04" transform="translate(14 20)">
-    <circle cx="18" cy="18" r="16"/>
-    <circle cx="64" cy="18" r="16"/>
-    <circle cx="18" cy="64" r="16"/>
-    <circle cx="64" cy="64" r="16"/>
+  <desc id="desc">Индустриальный знак и русская надпись ТЕХНОПРОГРЕСС</desc>
+  <rect x="2" y="2" width="916" height="166" fill="#efe4cd" stroke="#1c1916" stroke-width="4"/>
+  <rect width="154" height="170" fill="#a81616"/>
+  <circle cx="77" cy="72" r="49" fill="#1c1916"/>
+  <circle cx="77" cy="72" r="35" fill="none" stroke="#efe4cd" stroke-width="5"/>
+  <g fill="#efe4cd">
+    <circle cx="77" cy="48" r="10"/>
+    <circle cx="53" cy="72" r="10"/>
+    <circle cx="101" cy="72" r="10"/>
+    <circle cx="77" cy="96" r="10"/>
   </g>
-  <text x="112" y="61" fill="#161719" font-family="Arial, sans-serif" font-size="43" font-weight="900" letter-spacing="0">TECHNOPROGRESS</text>
-  <text x="114" y="96" fill="#161719" font-family="Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0.04em">КАБЕЛЬНО-ПРОВОДНИКОВАЯ ПРОДУКЦИЯ</text>
+  <path d="M18 139H136" stroke="#efe4cd" stroke-width="5"/>
+  <path d="M18 151H93" stroke="#1c1916" stroke-width="5"/>
+  <text x="178" y="88" fill="#1c1916" font-family="Impact, 'Arial Narrow', 'Roboto Condensed', Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ТЕХНОПРОГРЕСС</text>
+  <rect x="178" y="103" width="720" height="8" fill="#a81616"/>
+  <text x="178" y="145" fill="#37312b" font-family="'Arial Narrow', 'Roboto Condensed', Arial, sans-serif" font-size="23" font-weight="800" letter-spacing="2">КАБЕЛЬ • ЭЛЕКТРОТЕХНИКА • ПОСТАВКИ</text>
 </svg>
