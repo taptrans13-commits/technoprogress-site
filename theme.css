@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Oswald Site";
+  src: url("assets/fonts/Oswald-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans Narrow Site";
+  src: url("assets/fonts/PTSansNarrow-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans Narrow Site";
+  src: url("assets/fonts/PTSansNarrow-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --ink: #1c1916;
   --graphite: #37312b;
@@ -21,7 +45,9 @@ body {
     linear-gradient(90deg, rgba(55, 49, 43, 0.035) 1px, transparent 1px),
     radial-gradient(circle at 20% 10%, rgba(168, 22, 22, 0.04), transparent 28rem);
   background-size: 24px 24px, 24px 24px, auto;
-  font-family: "Arial Narrow", "Roboto Condensed", "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans Narrow Site", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
 }
 
 main { counter-reset: technical-section; }
@@ -37,7 +63,7 @@ h3,
 .category-tile span,
 .product-article,
 .mark-table th {
-  font-family: Impact, "Arial Narrow", "Roboto Condensed", "PT Sans Narrow", Arial, sans-serif;
+  font-family: "Oswald Site", Impact, "Arial Narrow", sans-serif;
 }
 
 h1,
@@ -105,7 +131,7 @@ h3 { text-wrap: balance; }
 .hero::after { display: none; }
 
 .hero-media {
-  inset: 0 0 0 52%;
+  inset: 0 0 0 56%;
   border-left: 3px solid var(--ink);
   background:
     linear-gradient(rgba(168, 22, 22, 0.25), rgba(168, 22, 22, 0.25)),
@@ -127,7 +153,7 @@ h3 { text-wrap: balance; }
 
 .hero h1 {
   max-width: 760px;
-  font-family: Impact, "Arial Narrow", "Roboto Condensed", sans-serif;
+  font-family: "Oswald Site", Impact, "Arial Narrow", sans-serif;
   font-size: clamp(56px, 7.4vw, 108px);
   font-weight: 900;
   line-height: 0.82;
@@ -632,4 +658,287 @@ textarea:focus {
 
   .page-hero h1 { font-size: clamp(42px, 12vw, 60px); }
   .direction-card { box-shadow: 5px 5px 0 rgba(55, 49, 43, 0.2); }
+}
+
+/* Unified type and balanced technical sheets */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "PT Sans Narrow Site", "Arial Narrow", Arial, sans-serif;
+}
+
+.eyebrow,
+.section-kicker,
+.product-meta,
+.product-article,
+.category-tile span,
+.side-category-group p,
+.side-category-link,
+.mark-table th,
+.tag-row span,
+.process-note span,
+.footer-contact span {
+  font-family: "Oswald Site", Impact, "Arial Narrow", sans-serif;
+}
+
+.hero h1,
+.page-hero h1,
+.product-main h1,
+.section-head h2,
+.request-copy h2,
+.process-copy h2,
+.intro-grid h2,
+.direction-card h3,
+.category-tile strong,
+.product-card h3,
+.feature-card h3,
+.solution-card h3,
+.article-card h3,
+.contact-card h2,
+.detail-panel h2,
+.catalog-side-block h2,
+.mark-family-card h3,
+.mark-mini-card h3,
+.mark-table-head h2,
+.calc-card h3,
+.legal-content h2,
+.process-step h3,
+.button,
+.nav-links,
+.header-phone,
+.footer-links,
+.footer-contact a {
+  font-family: "Oswald Site", Impact, "Arial Narrow", sans-serif;
+  font-weight: 700;
+}
+
+.hero h1,
+.page-hero h1,
+.product-main h1,
+.section-head h2,
+.request-copy h2,
+.process-copy h2,
+.direction-card h3,
+.category-tile strong,
+.product-card h3,
+.feature-card h3,
+.solution-card h3,
+.article-card h3,
+.contact-card h2,
+.mark-family-card h3,
+.mark-mini-card h3 {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-wrap: normal;
+  line-height: 1.08;
+}
+
+.hero h1,
+.page-hero h1,
+.product-main h1 { line-height: 1.02; }
+
+.section-head h2,
+.request-copy h2 { font-size: clamp(38px, 4.3vw, 62px); }
+
+.page-hero h1 { font-size: clamp(44px, 5.2vw, 72px); }
+
+.hero h1 { font-size: clamp(48px, 6.4vw, 84px); }
+
+.section-inner,
+.section-head > *,
+.intro-grid > *,
+.direction-grid > *,
+.category-grid > *,
+.product-grid > *,
+.feature-grid > *,
+.solution-grid > *,
+.article-grid > *,
+.contact-page-grid > *,
+.process-grid > *,
+.request-grid > *,
+.product-layout > *,
+.catalog-shell > *,
+.site-footer > * { min-width: 0; }
+
+.section-head {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.section-head > div,
+.section-head > p { max-width: 820px; }
+
+.section-head.compact {
+  max-width: none;
+  text-align: center;
+}
+
+.intro-grid,
+.request-grid,
+.process-grid,
+.process-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(22px, 4vw, 56px);
+}
+
+.direction-grid,
+.contact-page-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.contact-page-grid .contact-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.contact-page-grid .contact-card:last-child:nth-child(odd) .contact-stack {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.category-grid,
+.product-grid,
+.feature-grid,
+.solution-grid,
+.article-grid,
+.mark-mini-grid {
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.category-tile,
+.feature-card,
+.solution-card,
+.article-card,
+.contact-card,
+.product-card,
+.catalog-category-card,
+.mark-family-card,
+.mark-mini-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.feature-card,
+.solution-card,
+.article-card,
+.contact-card { display: flex; flex-direction: column; }
+
+.feature-card > a,
+.solution-card > a,
+.article-card > a { margin-top: auto; align-self: flex-start; }
+
+.feature-card h3,
+.solution-card h3,
+.article-card h3,
+.feature-card p,
+.solution-card p,
+.article-card p,
+.product-card h3,
+.product-card p,
+.mark-family-card h3,
+.mark-family-card p,
+.mark-mini-card h3,
+.mark-mini-card p {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: initial;
+}
+
+.product-card-body { grid-template-rows: auto auto 1fr auto; }
+.product-card-actions { align-items: stretch; }
+.product-card-actions .button { height: 100%; }
+
+.button,
+.nav-links a,
+.header-phone,
+.contact-stack a,
+.footer-links a,
+.footer-contact a,
+.mark-name-link {
+  overflow-wrap: anywhere;
+  text-wrap: wrap;
+}
+
+.button { font-size: 15px; line-height: 1.25; }
+.button.small { font-size: 14px; }
+.category-tile span,
+.product-meta,
+.product-article,
+.mark-table th,
+.mark-table td,
+.mark-table small,
+.side-category-group p,
+.side-category-link small { font-size: 14px; }
+
+.product-card p,
+.mark-family-card p,
+.mark-mini-card p,
+.process-step p { font-size: 16px; }
+
+.process-list li { grid-template-columns: 48px minmax(0, 1fr); }
+.process-list p { grid-column: 2; min-width: 0; overflow-wrap: anywhere; }
+
+.tag-row span { font-size: 13px; }
+
+.contact-stack a { max-width: 100%; }
+.request-contact a { max-width: 100%; overflow-wrap: anywhere; }
+
+.page-hero-inner,
+.hero-inner { min-width: 0; }
+
+.hero-inner > .eyebrow,
+.hero-inner > h1,
+.hero-inner > .hero-copy,
+.hero-inner > .hero-actions { max-width: min(690px, 53%); }
+
+.hero-actions { align-items: stretch; }
+.hero-actions .button { flex: 1 1 160px; }
+
+.hero-facts { max-width: 100%; }
+
+@media (max-width: 1120px) {
+  .hero-media { inset-inline-start: 63%; }
+
+  .hero-inner > .eyebrow,
+  .hero-inner > h1,
+  .hero-inner > .hero-copy,
+  .hero-inner > .hero-actions { max-width: 60%; }
+
+  .hero h1 { font-size: clamp(44px, 6.4vw, 72px); }
+}
+
+@media (max-width: 900px) {
+  .hero-media { inset: 0; }
+
+  .intro-grid,
+  .request-grid,
+  .process-grid,
+  .process-compact,
+  .direction-grid,
+  .contact-page-grid { grid-template-columns: 1fr; }
+
+  .hero-inner > .eyebrow,
+  .hero-inner > h1,
+  .hero-inner > .hero-copy,
+  .hero-inner > .hero-actions { max-width: 100%; }
+
+  .contact-page-grid .contact-card:last-child:nth-child(odd) { grid-column: auto; }
+  .contact-page-grid .contact-card:last-child:nth-child(odd) .contact-stack { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: clamp(34px, 10.2vw, 46px); }
+  .page-hero h1 { font-size: clamp(36px, 10vw, 52px); }
+  .section-head h2,
+  .request-copy h2 { font-size: clamp(34px, 9vw, 46px); }
+
+  .hero-actions .button { flex-basis: 100%; }
+  .contact-stack a { font-size: clamp(19px, 6vw, 26px); }
 }
